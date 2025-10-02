@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const isProd = process.env.NODE_ENV === "production";
-const repoName = "ITKZ"; // Replace with your GitHub repository name
+const repoName = "CK"; // Replace with your GitHub repository name
 
 const nextConfig: NextConfig = {
   // Configure for GitHub Pages deployment
