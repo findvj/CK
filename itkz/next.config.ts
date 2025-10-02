@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
   basePath: isProd ? `/${repoName}` : "",
   assetPrefix: isProd ? `/${repoName}/` : "",
   
+  // Fix workspace root detection warning
+  outputFileTracingRoot: path.join(__dirname, '../'),
+  
   // Configure turbopack with absolute path (disabled for dev due to CSS issues)
   // turbopack: {
   //   root: path.resolve(".")
