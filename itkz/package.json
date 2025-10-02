@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "export": "next build && next export",
-    "deploy": "npm run build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy to GitHub Pages\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "npm run build && echo. > out/.nojekyll && git add -f out/ && git commit -m \"Deploy to GitHub Pages\" && cd .. && git subtree push --prefix itkz/out origin gh-pages"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
@@ -21,9 +21,12 @@
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.263.1",
+    "nanoid": "^3.3.11",
     "next": "15.5.4",
+    "picocolors": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "source-map-js": "^1.2.1",
     "tailwind-merge": "^2.0.0",
     "zustand": "^4.4.1"
   },
